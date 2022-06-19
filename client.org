@@ -1,0 +1,48 @@
+#+title: ReST Client
+
+#+begin_src restclient
+POST http://localhost:8080/tfmeme/blahaj
+Content-Type: application/json
+
+{"meaning": "The cute ikea shark that a lot of us have for some reason 🦈"}
+#+end_src
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  "meme": "blahaj",
+  "glossary": "The cute ikea shark that a lot of us have for some reason 🦈"
+}
+// POST http://localhost:8080/tfmeme/blahaj
+// HTTP/1.1 200 OK
+// X-Powered-By: Express
+// Content-Type: application/json; charset=utf-8
+// Content-Length: 93
+// ETag: W/"5d-ZsgSSSdqWGqTA0TZTPP6c5KCVY0"
+// Date: Sun, 19 Jun 2022 01:04:47 GMT
+// Connection: keep-alive
+// Keep-Alive: timeout=5
+// Request duration: 0.006726s
+#+END_SRC
+
+
+#+begin_src restclient
+GET http://localhost:8080/tfmeme/
+#+end_src
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  "desc": "An api for explaining transfem memes"
+}
+// GET http://localhost:8080/tfmeme/
+// HTTP/1.1 200 OK
+// X-Powered-By: Express
+// Content-Type: application/json; charset=utf-8
+// Content-Length: 47
+// ETag: W/"2f-rjFvx/Eh676d6/kUDitiWkcGuv8"
+// Date: Sun, 19 Jun 2022 01:04:41 GMT
+// Connection: keep-alive
+// Keep-Alive: timeout=5
+// Request duration: 0.002233s
+#+END_SRC
